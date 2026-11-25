@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 导出的中间产物
+rules.json
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 本地评估单草稿（示例与模板要提交，草稿不要）
+drafts/
+*.draft.md

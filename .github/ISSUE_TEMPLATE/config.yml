@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 商用授权咨询
+    url: https://github.com/lvxiaoyu83/short-drama-eval-codex/blob/main/LICENSE
+    about: 商用须取得作者书面授权，条款与联系方式见 LICENSE 第四节
+  - name: 用法与边界（先读这个）
+    url: https://github.com/lvxiaoyu83/short-drama-eval-codex/blob/main/references/09_来源与出处.md
+    about: 哪些规则不能外推、参数什么时候过期、MET 域为什么不适用于合规审查

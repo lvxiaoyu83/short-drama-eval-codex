@@ -2,6 +2,29 @@
 
 格式参考 Keep a Changelog；版本遵循语义化版本。
 
+## [1.0.1] - 2026-11-25
+
+只改分发形态与文档，**规则一条没动**（仍 120 条 / 92 硬）。
+
+### 新增
+
+- `package.json` + `pi` 清单（`pi.skills: ["."]`、`pi.changelogPath`），支持
+  `pi install git:github.com/lvxiaoyu83/short-drama-eval-codex@v1` 与 `pi -e ./`；
+  `files` 白名单只打包文档与脚本，维护用的 `发布前检查清单.md` 不进 tarball
+- `.github/ISSUE_TEMPLATE/新规则提案.md`：**强制填写出处、边界与真实病例**，
+  并加一栏「这条规则的失败风险」（对照 `MET-01`／`MET-16`，防止提案变成闸门）
+- `.github/ISSUE_TEMPLATE/config.yml`：把「商用授权」与「用法与边界」提到入口
+- README 顶部徽章（Release / 规则数 / 域数 / Python / Agent Skill / 许可 / Stars）
+- README 安装段补「作为 pi 包安装」，并把占位 `<this-repo>` 换成真实地址
+
+### 变更
+
+- 版本号 1.0.0 → 1.0.1（`package.json`、`SKILL.md` `metadata.version`、README 署名样例）
+
+### 说明
+
+- 许可仍是自定义条款（`SEE LICENSE IN LICENSE`），故 GitHub 识别为 `Other / NOASSERTION`，属预期。
+
 ## [1.0.0] - 2026-11-23
 
 首个可发布版本。规则全部来自一套私有创作口径与复盘记录的提炼，不包含上游原文。

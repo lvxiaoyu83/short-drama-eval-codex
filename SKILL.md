@@ -4,7 +4,7 @@ description: 用一本带编号的判据集评估短剧的点子、剧本、分�
 license: 见 LICENSE（使用须署名；商用须取得作者书面授权）
 compatibility: 纯文本技能，脚本仅需 Python 3.8+ 标准库；无网络、无第三方依赖
 metadata:
-  version: 1.0.0
+  version: 1.0.1
   domain: 短剧 / 漫剧 / AIGC 影视
   rules: 120
   levels: 点子 → 剧本 → 分镜 → 成片 → 商业

@@ -1,5 +1,13 @@
 # 短剧评估法条本 · Short-Drama Evaluation Codex
 
+[![Release](https://img.shields.io/github/v/release/lvxiaoyu83/short-drama-eval-codex?label=release&color=blue)](https://github.com/lvxiaoyu83/short-drama-eval-codex/releases)
+[![Rules](https://img.shields.io/badge/rules-120-brightgreen)](data/rules.tsv)
+[![Domains](https://img.shields.io/badge/domains-8-blueviolet)](data/rules.tsv)
+[![Python](https://img.shields.io/badge/python-3.8%2B-3776ab)](scripts/xr.py)
+[![Agent Skill](https://img.shields.io/badge/agent--skill-portable-8250df)](SKILL.md)
+[![License](https://img.shields.io/badge/license-署名%2B商用授权-orange)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/lvxiaoyu83/short-drama-eval-codex?style=flat)](https://github.com/lvxiaoyu83/short-drama-eval-codex/stargazers)
+
 **一本带编号的判据集，用来评估短剧的点子、剧本、分镜和商业适配。**
 
 不是评分表，不是一键打回器。它把"我觉得这稿不行"换成
@@ -60,16 +68,35 @@ short-drama-eval-codex/
 
 ```bash
 # 用户级（所有项目可用）
-git clone <this-repo> ~/.agents/skills/short-drama-eval-codex
+git clone https://github.com/lvxiaoyu83/short-drama-eval-codex ~/.agents/skills/short-drama-eval-codex
 
 # 或 pi 的用户技能目录
-git clone <this-repo> ~/.pi/agent/skills/short-drama-eval-codex
+git clone https://github.com/lvxiaoyu83/short-drama-eval-codex ~/.pi/agent/skills/short-drama-eval-codex
 
 # 或项目级
-git clone <this-repo> .agents/skills/short-drama-eval-codex
+git clone https://github.com/lvxiaoyu83/short-drama-eval-codex .agents/skills/short-drama-eval-codex
 ```
 
 装完用 `/skill:short-drama-eval-codex` 可直接强制加载。
+
+### 作为 pi 包安装
+
+仓库带 `package.json` 的 `pi` 清单（`pi.skills: ["."]`），可以整包安装与更新：
+
+```bash
+# 从 git 装（推荐，跟着 tag 走）
+pi install git:github.com/lvxiaoyu83/short-drama-eval-codex@v1
+
+# 本地试用，不写入设置
+pi -e ./short-drama-eval-codex
+
+# 装完查看 / 移除
+pi list
+pi remove git:github.com/lvxiaoyu83/short-drama-eval-codex
+```
+
+> 发布到 npm 后也可以用 `pi install npm:short-drama-eval-codex`。
+> 本仓库只分发**文档与检索脚本**，不含任何扩展代码，安装时不会执行第三方程序。
 
 ### 只想当文档读
 
@@ -157,7 +184,7 @@ python3 scripts/xr.py export --json > rules.json
 最小署名格式：
 
 ```text
-评估依据：《短剧评估法条本》v1.0.0，作者：lvxiaoyu83，https://github.com/lvxiaoyu83/short-drama-eval-codex
+评估依据：《短剧评估法条本》v1.0.1，作者：lvxiaoyu83，https://github.com/lvxiaoyu83/short-drama-eval-codex
 使用须署名；商用须取得作者书面授权。
 ```
 
@@ -175,7 +202,7 @@ python3 scripts/xr.py export --json > rules.json
 
 ## 版本
 
-v1.0.0（2026-11-23）。变更见 [`CHANGELOG.md`](CHANGELOG.md)。
+v1.0.1（2026-11-25）。变更见 [`CHANGELOG.md`](CHANGELOG.md)。
 
 ## 免责
 

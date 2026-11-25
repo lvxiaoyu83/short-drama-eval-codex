@@ -1,0 +1,58 @@
+{
+  "name": "short-drama-eval-codex",
+  "version": "1.0.1",
+  "description": "短剧/漫剧评估判据集：120 条带编号的规则 + 反闸门的评估纪律。可作 Agent Skill 安装。",
+  "keywords": [
+    "pi-package",
+    "agent-skills",
+    "skill",
+    "short-drama",
+    "micro-drama",
+    "screenwriting",
+    "screenplay",
+    "evaluation",
+    "rubric",
+    "checklist",
+    "aigc",
+    "chinese"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "lvxiaoyu83 <lvxiaoyu83@163.com>",
+  "homepage": "https://github.com/lvxiaoyu83/short-drama-eval-codex#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvxiaoyu83/short-drama-eval-codex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lvxiaoyu83/short-drama-eval-codex/issues"
+  },
+  "pi": {
+    "skills": [
+      "."
+    ],
+    "changelogPath": "./CHANGELOG.md"
+  },
+  "files": [
+    "SKILL.md",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json",
+    "data/",
+    "references/",
+    "scripts/",
+    "templates/",
+    "examples/"
+  ],
+  "scripts": {
+    "test": "python3 scripts/xr.py selftest && python3 scripts/xr.py check && python3 scripts/check_eval.py --all examples/",
+    "check": "python3 scripts/xr.py check",
+    "list": "python3 scripts/xr.py domains"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
